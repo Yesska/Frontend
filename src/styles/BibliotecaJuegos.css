@@ -1,0 +1,154 @@
+.biblioteca-juegos {
+    padding: 30px 20px;
+}
+
+.biblioteca-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 12px;
+}
+
+.orden-export {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.btn-export {
+    padding: 8px 12px;
+    background: #2b6cb0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-export:hover {
+    background: #2c5282;
+}
+
+.paginacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.biblioteca-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.biblioteca-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.biblioteca-title h1 {
+    margin: 0;
+    color: #333;
+    font-size: 32px;
+}
+
+.total-juegos {
+    background: #667eea;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.btn-agregar {
+    padding: 12px 24px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-agregar:hover {
+    background: #45a049;
+}
+
+.filtros {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.filtro-busqueda,
+.filtro-select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    background: white;
+}
+
+.filtro-busqueda:focus,
+.filtro-select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.grilla-juegos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.sin-resultados {
+    text-align: center;
+    padding: 60px 20px;
+    color: #999;
+    font-size: 18px;
+}
+
+@media (max-width: 1024px) {
+    .filtros {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grilla-juegos {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .biblioteca-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .biblioteca-title {
+        flex-direction: column;
+    }
+
+    .biblioteca-title h1 {
+        font-size: 24px;
+    }
+
+    .btn-agregar {
+        width: 100%;
+    }
+
+    .filtros {
+        grid-template-columns: 1fr;
+    }
+
+    .grilla-juegos {
+        grid-template-columns: 1fr;
+    }
+}

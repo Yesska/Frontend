@@ -1,0 +1,193 @@
+.lista-reseñas {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.lista-reseñas h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.lista-reseñas-vacia {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+    color: #999;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.estadisticas-reseñas {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.promedio {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+}
+
+.promedio-valor {
+    font-size: 40px;
+    font-weight: bold;
+    color: #667eea;
+}
+
+.promedio-label {
+    font-size: 16px;
+    color: #999;
+}
+
+.total-reseñas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.total-reseñas span:first-child {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.total-reseñas span:last-child {
+    font-size: 12px;
+    color: #999;
+}
+
+.reseñas-contenedor {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.reseña-item {
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 20px;
+    background: #fafafa;
+    transition: all 0.3s;
+}
+
+.reseña-item:hover {
+    background: white;
+    border-color: #667eea;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
+}
+
+.reseña-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.reseña-estrellas {
+    display: flex;
+    gap: 3px;
+    font-size: 20px;
+}
+
+.estrella-llena {
+    color: #ffc107;
+}
+
+.estrella-vacia {
+    color: #e0e0e0;
+}
+
+.dificultad {
+    background: #e3f2fd;
+    color: #1976d2;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: auto;
+}
+
+.recomendado {
+    background: #e8f5e9;
+    color: #2e7d32;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.reseña-contenido {
+    margin-bottom: 15px;
+}
+
+.reseña-contenido p {
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.reseña-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.reseña-stats {
+    display: flex;
+    gap: 20px;
+    font-size: 12px;
+    color: #999;
+}
+
+.reseña-acciones {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-editar-reseña,
+.btn-eliminar-reseña {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-editar-reseña {
+    background: #ff9800;
+    color: white;
+}
+
+.btn-editar-reseña:hover {
+    background: #f57c00;
+}
+
+.btn-eliminar-reseña {
+    background: #f44336;
+    color: white;
+}
+
+.btn-eliminar-reseña:hover {
+    background: #da190b;
+}
+
+@media (max-width: 768px) {
+    .reseña-footer {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .estadisticas-reseñas {
+        flex-direction: column;
+    }
+}

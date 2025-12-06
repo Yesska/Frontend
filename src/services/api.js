@@ -35,22 +35,31 @@ export const gamesService = {
     getWishlist: () => apiClient.get('/juegos/wishlist'),
 };
 
+// Helper para normalizar payload de reseñas
+const sanitizeReviewPayload = (data) => {
+    const payload = { ...data };
+    if (payload.juegoId && typeof payload.juegoId === 'object' && payload.juegoId._id) {
+        payload.juegoId = payload.juegoId._id;
+    }
+    return payload;
+};
+
 // ===== SERVICIOS PARA RESEÑAS =====
 export const reviewsService = {
-    // Obtener todas las reseñas
-    getAllReviews: () => apiClient.get('/reseñas'),
+    // Obtener todas las reseñas (usar alias ASCII /reviews)
+    getAllReviews: () => apiClient.get('/reviews'),
 
     // Obtener reseñas de un juego específico
-    getReviewsByGame: (gameId) => apiClient.get(`/reseñas/juego/${gameId}`),
+    getReviewsByGame: (gameId) => apiClient.get(`/reviews/juego/${gameId}`),
 
     // Crear una nueva reseña
-    createReview: (reviewData) => apiClient.post('/reseñas', reviewData),
+    createReview: (reviewData) => apiClient.post('/reviews', sanitizeReviewPayload(reviewData)),
 
     // Actualizar una reseña
-    updateReview: (id, reviewData) => apiClient.put(`/reseñas/${id}`, reviewData),
+    updateReview: (id, reviewData) => apiClient.put(`/reviews/${id}`, sanitizeReviewPayload(reviewData)),
 
     // Eliminar una reseña
-    deleteReview: (id) => apiClient.delete(`/reseñas/${id}`),
+    deleteReview: (id) => apiClient.delete(`/reviews/${id}`),
 };
 
 // ===== SUBIDA DE IMÁGENES =====
